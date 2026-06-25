@@ -1,0 +1,17 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+run-name: Ruuning first workflow
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  validate-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: print Branch name
+        run: echo ${{ github.ref_name }}
+
+      
