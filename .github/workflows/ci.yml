@@ -28,5 +28,7 @@ jobs:
           java-version: ${{ matrix.java-version }}
       - name: display version
         run: java -version
-
+    
+      - name: Build the package
+        run: mvn -B clean Package
       
